@@ -1,31 +1,97 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+@section Scripts{
+    <script>
+        console.log("Hello");
+    </script>
+    <style>
+        body {
+            background-color: #474747;
+        }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+        p {
+            color: #b4b3b3 !important;
+            font-size: 20px;
+            font-family: Arial;
+        }
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        .image {
+            border-radius: 30px
+        }
+
+        .intro{
+            padding-top: 30px;
+        }
+
+        .profile{
+            text-align: center;
+            font-size: 50px;
+            color: #b4b3b3 !important;
+            font-weight:100;
+            margin-top: 25px;
+            font-family: Arial;
+        }
+
+        .aboutMeBody{
+            font-size: 14px;
+            font-family: Arial;
+            color: #b4b3b3 !important;
+        }
+
+        .quote{
+            text-align: center;
+        }
+
+        .author{
+            text-align: center;
+            margin-left: 100px;
+        }
+
+
+        .imageDiv {
+            padding-top: 50px;
+            max-width: 250px;
+            font-size: 18px;
+            font-family: Arial;
+            color: #b4b3b3 !important;
+        }
+
+        .aboutMe{
+            font-family: Arial;
+            color: #b4b3b3 !important;
+        }
+    </style>
+}
+
+<div class="container">
+    <div class="profile">Profile</div>
+    <br />
+    <br />
+    <p class="quote">
+        "Learning never exhausts the mind."
+    </p>
+    <p class="author">- Leonardo da Vinci</p>
+    <hr />
+    <div class="row intro">
+        <div class="col-md-3"></div>
+        <div class="col-md-4 imageDiv">
+            <img class="image" src="~/Images/Me.jpg" />
+        </div>
+        <div class="col-md-3">
+            <h3 class="aboutMe">About me</h3>
+            <br />
+            <p class="aboutMeBody">
+                I've always had an interest in technology.
+                I used to work at Circuit City in the video department.
+                Then worked at Verizon and got involved with phones.
+                Durring that time I thought I wanted to be in Marketing
+                but after getting my degree, I was introduced to coding
+                by a friend of mine so I went back got an IT degree and 
+                have loved coding ever since.
+            </p>
+        </div>
+        <div class="col-md-2"></div>
     </div>
 </div>
+        

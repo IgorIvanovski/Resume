@@ -13,7 +13,7 @@ namespace Resume
     {
         protected void Application_Start()
         {
-            Database.SetInitializer<Resume.Models.LanguageContext>(null);
+            //Database.SetInitializer<Resume.Models.LanguageContext>(null);
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);

@@ -3,114 +3,171 @@
     ViewBag.Title = "Work";
 }
 @section Scripts{
+    <script src="https://kit.fontawesome.com/ec79bfe7a6.js" crossorigin="anonymous"></script>
     <script>
-        console.log("Hello");
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
     </script>
+    <style>
+        body {
+            background-color: #474747;
+        }
+
+        hr {
+            border: 5px solid;
+            border-radius: 25px;
+        }
+
+        .jobs {
+            margin-top: 145px;
+        }
+
+        .timeline {
+            margin-top: -25px;
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+
+        .circuit {
+            margin-top: 70px;
+            padding-right: 1px;
+            color: lightcoral;
+            padding-left: 0px;
+        }
+
+            .circuit:hover, .verizon:hover, .gongos:hover {
+                -ms-transform: scale(1.1); /* IE 9 */
+                -webkit-transform: scale(1.1); /* Safari 3-8 */
+                transition: transform .3s;
+            }
+
+        .verizon {
+            margin-top: 50px;
+            color: red;
+            padding-left: 1px;
+            padding-right: 1px;
+        }
+
+        .gongos {
+            margin-top: 30px;
+            color: lightblue;
+            padding-left: 1px;
+            padding-right: 0px;
+        }
+
+        .experience {
+            text-align: center;
+            font-size: 50px;
+            color: #b4b3b3 !important;
+            font-weight: 100;
+            margin-top: 75px;
+            font-family: Arial;
+        }
+
+        .school {
+            font-size: 12px;
+            font-family: Arial;
+            color: white;
+        }
+
+
+        .school-div {
+            margin-top: 5px;
+        }
+
+        .fa-book-open{
+            margin-right: 5px;
+        }
+
+        .tooltip-inner {
+            max-width: 250px;
+            /* If max-width does not work, try using width instead */
+            background-color: #4f7a8f;
+            font-family: Arial;
+            text-align:left;
+            margin-bottom: 3px;
+        }
+
+        .begYear, .endYear{
+            float:left;
+            font-family: Arial;
+            font-size: 16px;
+            color: white;
+        }
+
+        .endYear{
+            float:right;
+            font-family: Arial;
+            font-size: 16px;
+            color: white;
+        }
+
+        .begYearDiv{
+            padding-left: 0px;
+        }
+
+        .endYearDiv{
+            padding-right: 0px;
+        }
+
+    </style>
 }
-<h2>Careers</h2>
+<h2 class="experience">Experience</h2>
 <br />
+
 <div class="container">
-    <div class="row">
-        <div class="col-md-2">
-            <p><strong>Gongos</strong></p>
+    <div class="row jobs">
+        <div class="col-sm-3 circuit">
+            <hr data-toggle="tooltip" data-html="true" data-placement="top" title="Sales Specialist<br>Circuit City<br>2005 - 2009" />
         </div>
-        <div class="col-md-8">
-            <p><strong>Production Programmer</strong></p>
-            <p>
-                Collaborated with project staff and Operations to develop surveys based on clients' needs to gather data,
-                which in turn would help businesses attract the right customers or see who was buying their products/services
-            </p>
-            <p>
-                Primarily worked in an existing framework manipulating the controllers and views based on the requirements.
-                Models are static due to predetermined database structures
-            </p>
-            <p>
-                Spent time working with LINQ statements and JavaScript translating business requirements (survey branches)
-                into code and manipulating razor pages
-            </p>
-            <p>
-                Worked on multiple projects simultaneously using multiple programming languages(C#, JavaScript, jQuery, HTML, CSS, SQL)
-            </p>
-            <p>
-                Participated in gathering requirements to develop new or update existing surveys
-            </p>
-            <p>
-                Supported project staff with data analysis to ensure proper logic was deployed prior to launch
-            </p>
-            <p>
-                Continuously debugged projects developed by multiple developers and included or corrected comments
-            </p>
+        <div class="col-sm-5 verizon">
+            <hr data-toggle="tooltip" data-html="true" data-placement="top" title="Experience Specialist/Workshop SME<br>Verizon<br>2009 - 2017" />
         </div>
-        <div class="col-md-2">
-            <p><strong>2017 - Current</strong></p>
+        <div class="col-sm-4 gongos">
+            <hr data-toggle="tooltip" data-html="true" data-placement="top" title="Programmer<br>Gongos<br>2017 - Current" />
         </div>
-    </div>
-    <br />
-    <br />
-    <div class="col-md-2">
-        <p><strong>Verizon Wireless</strong></p>
-    </div>
-    <div class="col-md-8">
-        <p>
-            Assisted in overall store location leadership along with being responsible for sales and support related
-            activities; direct contributor in making multiple store locations top tier Verizon Wireless selling sites
-            through training, problem resolution, plan analysis, consumer/business negotiations, generating sales
-            leads/referrals as well as acting as subject matter expert (SME) for new devices and technical product
-            knowledge areas
-        </p>
-        <p>
-            Gained considerable experience in creating action plans and working with team members to successfully
-            implement target strategies
-        </p>
-        <p>
-            Provided technical solutions to customers on widely ranging subjects and devices, including smart phone,
-            laptop, software, and hardware troubleshooting
-        </p>
-        <p>
-            Collaborated with the Marketing department to develop various product promotions
-        </p>
-        <p>
-            Worked with local and District Managers along with Marketing department to develop an in-store
-            Customer Appreciation event to inform and educate customers on new products
-        </p>
-        <p>
-            Successfully built relationships, grew sales, established customer loyalty, and trust; twice awarded for
-            excellent customer service
-        </p>
-        <p>
-            Promoted and conducted daily wireless workshops to train customers on existing products and to
-            promote sales of new products
-        </p>
-        <p>
-            Achieved customer satisfaction rating 9.6 out of 10 for wireless workshops
-        </p>
-        <p>
-            Chosen for “Voice of the Rep” to simplify the processes with a focus on reducing costs, improving
-            customer experience, and POS recommendations
-        </p>
-        <p>
-            Key Holder – Manager on Duty
-            <ul>
-                Performed many management duties such as key maintenance, cash drawers, addressing
-                customers, employee questions/issues
-            </ul>
-            <ul>
-                Led meetings and effectively trained staff to improve sales methods to attain store goals
-            </ul>
-        </p>
-        <p>
-            Sales Consultant/Small Business Specialist
-            <ul>
-                Conducted on-site classes to teach small business employees how to use their mobile devices to
-                help increase efficiency and productivity
-            </ul>
-            <ul>
-                Consulted small business as personal Account Manager to help them reduce costs or improve
-                how they conducted business by introducing new technologies
-            </ul>
-        </p>
-    </div>
-    <div class="col-md-2">
-        <p><strong>2009 - 2017</strong></p>
     </div>
 </div>
+
+<div class="container">
+    <div class="row ">
+        <div class="col-sm-12 timeline">
+            <hr />
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row ">
+        <div class="col-sm-6 begYearDiv">
+            <p class="begYear">2005</p>
+        </div>
+        <div class="col-sm-6 endYearDiv">
+            <p class="endYear">2020</p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row school-div">
+        <div class="col-sm-4">
+        </div>
+        <div class="col-sm-6 school">
+            <p>
+                <i class="fas fa-book-open"></i>
+                Bachelor of Business Administration in Computer Information Management - 2016
+            </p>
+            <p>
+                <i class="fas fa-book-open"></i>
+                Bachelor of Business Administration in Marketing (Cum Laude) - 2010
+            </p>
+        </div>
+        <div class="col-sm-2">
+        </div>
+    </div>
+</div>
+
+
+
+
+

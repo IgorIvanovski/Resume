@@ -6,43 +6,35 @@
     <title>@ViewBag.Title - Resume</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+
 </head>
 <body>
-    <nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark">
-        <div class="container">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            @Html.ActionLink("Igor Ivanovski", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            <div class="navbar-collapse collapse" id="navbarSupportedContent">
-                <ul class="nav navbar-nav mr-auto">
-                    <li>@Html.ActionLink("Work", "Work", "Home")</li>
-                    <li>@Html.ActionLink("About Me", "About", "Home")</li>
-                    <li>@Html.ActionLink("Ability", "Abilities", "Home")</li>
-                    <li>@Html.ActionLink("Connect", "Contact", "Home")</li>
+    <div class="navbar navbar-inverse navbar-fixed-top" style="background-color:#474747; border-bottom:0px;">
+        <div class="container" s>
+            <div class="navbar-header" >
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" >
+                    <span class="icon-bar"> </span>
+                    <span class="icon-bar"> </span>
+                    <span class="icon-bar"> </span>
+                </button>
+                @Html.ActionLink("II", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("WORK", "Work", "Home") </li>
+                    <li>@Html.ActionLink("ABILITY", "Index", "Ability") </li>
+                    <li>@Html.ActionLink("CONNECT", "Contact", "Home") </li>
                 </ul>
-
-                <ul class="nav navbar-nav navbar-right mr-auto">
-                    <li class="nav-item"><a href="/Account/Register" id="registerLink" class="nav-link">Register</a></li>
-                    <li class="nav-item"><a href="/Account/Login" id="loginLink" class="nav-link">Log in</a></li>
-                </ul>
-
             </div>
         </div>
-    </nav>
+    </div>
     <div class="container body-content">
         @RenderBody()
-        <hr />
         <footer style="position:fixed;bottom:0;">
-            <div class="col-md-12">
-                Follow Me: Linked-in&nbsp;|&nbsp;Codepen&nbsp;|&nbsp;Instagram
-            </div>
-            <p>&copy; @DateTime.Now.Year - Resume</p>
+            <p style="font-size: 12px;font-family: Arial;color: darkgrey"> 
+            This website has been made with ASP.NET MVC by Me</p>
         </footer>
     </div>
-
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)

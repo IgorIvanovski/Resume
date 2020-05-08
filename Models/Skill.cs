@@ -12,10 +12,10 @@ namespace Resume.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Language
+    public partial class Skill
     {
         public int ID { get; set; }
-        public string LanguageName { get; set; }
+        public string SkillName { get; set; }
         public Nullable<int> Stars { get; set; }
     }
 }

@@ -1,0 +1,140 @@
+﻿@using Resume.Models
+@model dynamic
+@{
+    ViewBag.Title = "Index";
+}
+
+@section Scripts{
+    <script src="https://kit.fontawesome.com/ec79bfe7a6.js" crossorigin="anonymous"></script>
+    <script>
+
+        $(function () {
+
+            console.log('test');
+        });
+
+    </script>
+    <style>
+        body{
+            background-color: #474747;
+        }
+        .fa {
+            color: #b4b3b3 !important;
+        }
+
+        table {
+            font-size: 14px;
+            font-family: Arial;
+        }
+
+        td {
+            border-top: 0px !important;
+        }
+
+        .heading {
+            color: #b4b3b3 !important;
+            font-size: 20px;
+            font-family: Arial;
+        }
+
+        .abilities{
+            font-family: Arial;
+            color: #b4b3b3 !important;
+            font-size: 54px;
+            text-align: center;
+        }
+        .head {
+            margin-top: 50px;
+            margin-bottom: 100px;
+        }
+        .name{
+            color: white;
+        }
+
+        .nameAndStar:hover{
+            -ms-transform: scale(1.1); /* IE 9 */
+            -webkit-transform: scale(1.1); /* Safari 3-8 */
+            
+            transition: transform .5s;
+        }
+    </style>
+}
+
+
+<div class="container head">
+    <div class="col">
+        <div class="col-lg-12">
+            <p class="abilities">Abilities</p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="col">
+        <div class="col-lg-4">
+            <p class="heading">Skills</p>
+            <hr />
+            <table class="table">
+                <tbody>
+                    @foreach (Skill skill in Model.skillList)
+                    {
+                        <tr class="nameAndStar">
+                            <td class="name">@skill.SkillName</td>
+
+                            @while (skill.Stars > 0)
+                            {
+                                <td class="fa fa-star" aria-hidden="true"></td>
+                                skill.Stars--;
+                            }
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="col">
+        <div class="col-lg-4">
+            <p class="heading">Languages</p>
+            <hr />
+            <table class="table">
+                <tbody>
+                    @foreach (Language language in Model.languageList)
+                    {
+                        <tr class="nameAndStar">
+                            <td class="name">@language.LanguageName</td>
+
+                            @while (language.Stars > 0)
+                            {
+                                <td class="fa fa-star" aria-hidden="true"></td>
+                                language.Stars--;
+                            }
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="col">
+        <div class="col-lg-4">
+            <p class="heading">Tools</p>
+            <hr />
+            <table class="table" style="border: 0 none;
+">
+                <tbody>
+                    @foreach (Tool tool in Model.toolList)
+                    {
+                        <tr class="nameAndStar">
+                            <td class="name">@tool.ToolName</td>
+
+                            @while (tool.Stars > 0)
+                            {
+                                <td class="fa fa-star" aria-hidden="true"></td>
+                                tool.Stars--;
+                            }
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

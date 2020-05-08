@@ -33,17 +33,5 @@ namespace Resume.Controllers
 
             return View();
         }
-        public ActionResult Abilities()
-        {
-            //add a model where I can track the skills through sql
-            LanguageContext languageContext = new LanguageContext();
-            //Language language = languageContext.languages.OrderBy(lan => lan.LanguageName);
-            IOrderedQueryable<Language> language = languageContext.languages.OrderByDescending(lan => lan.Stars);
-            //Language language = languageContext.languages.OrderBy(l => l.LanguageName);
-
-
-
-            return View(language);
-        }
     }
 }
