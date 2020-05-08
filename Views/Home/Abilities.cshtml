@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Resume.Models.Language>
+
+@{
+    ViewBag.Title = "Abilities";
+}
+
+<h2>Abilities</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.LanguageName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Stars)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.LanguageName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Stars)
+        </td>
+    </tr>
+}
+
+</table>
